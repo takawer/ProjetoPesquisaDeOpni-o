@@ -1,0 +1,20 @@
+
+<nav class="navbar navbar-default navbar-static-top navbar-inverse">
+  <div class="container">
+    <button (click)="logout()" class="btn btn-danger mr-3">Logout</button>
+  </div>
+</nav>
+<h1 class="header">Bem Vindo! {{user.name}}</h1>
+<div class="row">
+  <div class="col-md-6 col-md-offset-4 mt-4">
+    <div class="card" style="width: 20rem;">
+      <img class="card-img-top image" [src]="user.image" *ngIf="user.image" alt="User image">
+      <img class="card-img-top image" src="https://via.placeholder.com/400x300" *ngIf="!user.image" alt="User image">
+      <div *ngIf='user.provider != "password"'class="card-body">
+        <h4 class="card-title">{{user.name}}</h4>
+      </div>
+    </div>
+  </div>
+</div>
+<app-questionario class="row justify-content-center mt-12"></app-questionario>
+ 

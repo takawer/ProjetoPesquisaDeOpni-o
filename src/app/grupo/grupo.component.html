@@ -1,0 +1,47 @@
+<nav class="navbar navbar-default navbar-static-top navbar-inverse">
+  <div class="container" id="nav">
+    <button id="home" routerLink="/user" class="btn btn-warning ">Página Inicial</button>
+  </div>
+</nav>
+<div class='container justify-content-center col-12 col-sm-10 col-md-8 col-lg-6'>
+<section>
+  <button (click)="toggle()" class="btn btn-primary">{{btnText}}</button>
+</section>  
+<div class="form" *ngIf="btnText === 'Esconder Questão Aberta'">
+    <div class="form-group mt-4">
+      <label>Título</label>
+      <input input [(ngModel)]="titulo" class="form-control" name="titulo" >
+    </div>  
+    <button class="btn btn-success" (click)="salvarQuestaoAberta()">Salvar</button>
+    
+</div>
+
+<section>
+  <button (click)="toggler()" class="btn btn-primary">{{btnTexto}}</button>
+</section>  
+<div class="form" *ngIf="btnTexto === 'Esconder Questão Fechada'">
+    <div class="form-group mt-4">
+      <label>Título</label>
+      <input input [(ngModel)]="titulo" class="form-control" name="titulo" >
+    </div>  
+    <form [formGroup]="fields" class="example-form" (submit)="showData()">
+  Alternativas:
+  <div class='' formArrayName='elementArray' *ngFor="let item of fields.get('elementArray').controls; let i = index">
+    <div [formGroupName]="i">
+      <input type="checkbox" formControlName="statusVal" placeholder="Enter Name">
+      {{item.value.name}}
+
+    </div>
+  </div>
+</form>
+
+<hr/>
+
+<input type='text' [(ngModel)]="insertedName" placeholder="Alternativa" />
+<button class="btn btn-primary btn-sm" id="alt" (click)="createNew()"> Add Alternativa </button>
+<div>
+<button class="btn btn-success" >Salvar</button>
+</div>
+
+</div>
+

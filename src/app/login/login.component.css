@@ -1,0 +1,29 @@
+.header{
+  text-align: center;
+  font-size: 30px;
+  margin-bottom: 40px;
+}
+
+.row{
+  margin-top: 10px;
+  text-align: center;
+}
+
+.error{
+  color: red;
+  align-content: center;
+}
+
+
+
+html, body{
+    height:100%; /* important to vertically align the container */
+    margin:auto;
+    padding:auto;
+   
+}
+
+
+
+
+

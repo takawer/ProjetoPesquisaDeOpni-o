@@ -1,0 +1,30 @@
+.form{
+  width: 60vw;
+  margin-left: 20%;
+}
+
+.form button{
+  width: 15vw;
+  
+}
+
+
+button{
+  width: 100%
+}
+
+#home{
+  width: 12%
+}
+
+#alt{
+  width: 10%
+}
+
+
+#nav{
+  font-size: 15px;
+  font-family: Helvetica;
+  background-color: rgb(69, 80, 182);
+
+}

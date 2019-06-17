@@ -1,0 +1,30 @@
+.header{
+  text-align: center;
+  font-size: 30px;
+  margin-bottom: 40px;
+  font-family: Helvetica;
+
+}
+
+.row{
+  margin-top: 10px;
+}
+
+.card{
+    text-align: center;
+    position: relative;
+    margin-left:85% ;
+    font-family: Helvetica;
+
+}
+
+.image {
+  width: 100%
+}
+
+.container{
+  font-size: 15px;
+  font-family: Helvetica;
+  background-color: rgb(69, 80, 182);
+
+}
